@@ -1,0 +1,24 @@
+<DOCTYPE !HTML>
+
+<html>
+<head>
+
+<script src="/socket.io/socket.io.js"></script>
+<title>Test IO</title>
+
+<script>
+  var socket=io.connect();
+  socket.on('connect',function(){
+	console.log('user Connected to Browsers!');
+	var name=prompt('What is you Name?');
+	this.emit('set nickname',name);
+  });
+  
+  
+</script>
+
+</head>
+
+<body>
+<h1>Testing</h1>
+</body>
