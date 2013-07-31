@@ -3,22 +3,140 @@
 <html>
 <head>
 
-<script src="/socket.io/socket.io.js"></script>
-<title>Test IO</title>
 
-<script>
-  var socket=io.connect();
-  socket.on('connect',function(){
-	console.log('user Connected to Browsers!');
-	var name=prompt('What is you Name?');
-	this.emit('set nickname',name);
-  });
-  
-  
-</script>
+<title>Test IO</title>
 
 </head>
 
 <body>
-<h1>Testing</h1>
+
+<table>
+	<tr>
+		<td>
+		Test Data
+		</td>
+
+		<td id="Odata">
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+		Data for Orientation X
+		</td>
+
+		<td id="OX">
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+		Data for Orientation Y
+		</td>
+
+		<td id="OY">
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+		Data for Orientation Z
+		</td>
+
+		<td id="OZ">
+		</td>
+	</tr>
+
+
+	<tr>
+		<td>
+		Test Data
+		</td>
+
+		<td id="Mdata">
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+		Data for Motion X
+		</td>
+
+		<td id="MX">
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+		Data for Motion Y
+		</td>
+
+		<td id="MY">
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+		Data for Motion Z
+		</td>
+
+		<td id="MZ">
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+		Test Data
+		</td>
+
+		<td id="MGdata">
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+		Data for Motion G X
+		</td>
+
+		<td id="MGX">
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+		Data for Motion G Y
+		</td>
+
+		<td id="MGY">
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+		Data for Motion G Z
+		</td>
+
+		<td id="MGZ">
+		</td>
+	</tr>
+</table>
+<script src="socket.io/socket.io.js"></script>
+<script src='js/events.js'></script>
+<script>	
+	window.addEventListener("load",function(event){
+		alert("Entering");
+		orient();
+	},false);
+	window.addEventListener("beforeunload",function(event){
+		showCount();
+	},false);
+	
+	/*window.attachEvent("onbeforeunload", function(event){
+		alert("Ending");
+		alert(count);
+	});*/
+	
+	//window.beforeunload = showCount;
+</script>
+
 </body>
